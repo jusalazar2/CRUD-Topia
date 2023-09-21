@@ -10,26 +10,31 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
+ <link rel="stylesheet" href="color.css">
+
         <title>JSP Page</title>
     </head>
     <body
 <body background >
  <div id="container">
 
-        <div id="header"><h1 align="center"  style="color:purple"> V&M SUEÑOS DE CARTON</h1></div>
-        <center><img src="img/85454831-ilustración-de-papelería-para-estudiar-y-oficina.jpg" alt="" width="180" pading="190"/></center>
+        <div id="header"><h1 align="center"  style="color:red"> CRUD</h1></div>
         
         <div id="wrapper">
             <div class="d-grid gap-2 col-6 mx-auto"><div>
                 <div id="content" align="center">
-                    <table border="1" class="table table-dark table-striped">
-                        <td><center><input type="submit" class="btn btn-primary" name="Query" value="CONSULTAR" onClick="window.open('FormConsulta.jsp')"></center></td><tr>
-                        <td><center><input type="button" class="btn btn-primary" name="Insert" value="INGRESAR" onClick="window.open('FormIngresar.jsp')"></center></td><tr>
-                            <td><center><input type="submit" class="btn btn-primary" name="Update" value="ACTUALIZAR" onClick="window.open('FormActualizar.jsp')"></center></td><tr>
-                            <td><center><input type="submit" class="btn btn-primary" name="Delete" value="ELIMINAR" onClick="window.open('FormEliminar.jsp')"></center></td><tr>
-                                    <td><center><input type="submit" class="btn btn-primary" name="Select" value="BUSCAR" onClick="window.open('FormConsulta_1.jsp')"></center></td><tr>
-                    </table>
+                    <table border="1" class="table table-striped">
+                        <td><center>
+                             <form action="FormConsulta_2.jsp">
+                            
+                            <button name="Select" class="btn btn-outline-info" type="submit" >BUSCAR</button>
+         </form>
+                                             <form action="login.jsp">
+                    <button name="Select" class="btn btn-outline-danger" type="submit" >Cerrar sesion</button>
+         </form>
+                    
+                        </center></td><tr>
+                        </table>
                 </div>
             </div>
         </div>

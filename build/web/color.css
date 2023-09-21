@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: linear-gradient(color:purple );
+}
+
+table{
+    font-size: 18px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    
+}
+thead{
+    background: #AF7AC5;
+}
+th{
+    padding: 20px 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+}
+td{
+    padding: 15px;
+    border-bottom: solid 1px #ccc;
+}
+tbody tr{
+    cursor: pointer;
+}
+tbody tr:hover{
+    background: #D7DBDD ;
+}

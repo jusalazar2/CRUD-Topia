@@ -13,19 +13,21 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <link rel="stylesheet" href="color.css">
 
         <title>JSP Page</title>
     </head>
-    <body>
-        <form>
-            <table class="table table-dark table-striped">
+    <body style="background-color:#D6EAF8">
+        
+            <table class="">
                 <tr><td> Nombre</td><td><input type="text" name="nombre"></td></tr>
-                <tr><td colspan="2"><input type="submit" name="consultar" value="Consultar"></td>
-                    <td><input type="submit" class="btn btn-primary" name="Query" value="inicio" onClick="window.open('index.jsp')"></td>
-                    <td><input type="submit" class="btn btn-primary"name="Query" value="Eliminar" onClick="window.open('FormEliminar.jsp')"></td>
-                    <td><input type="submit" class="btn btn-primary"name="Query" value="insertar" onClick="window.open('FormIngresar.jsp')"></td>
-
+                <tr><td colspan="2"><input class="btn btn-outline-danger" type="submit" name="consultar" value="Consultar"></td>
+                    
+                   
             </table>
+                   <form action="pagaAdmin.jsp">
+                    <button name="Select" class="btn btn-outline-secondary" type="submit" >Atras</button>
+                </form>
             <%
        
             if (request.getParameter("consultar")!=null)

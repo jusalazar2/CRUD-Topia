@@ -11,22 +11,23 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <link rel="stylesheet" href="color.css">
 
         <title>JSP Page</title>
     </head>
         <form>
     <body>
-        <table border="1" class="table table-dark table-striped">
+        <table border="" class="">
             <tr>
             <tr><td> Nombre</td><td><input type="text" name="nombre"></td></tr>
             <tr> <td>Direccion</td><td> <input type="text" name="direccion"></td></tr>
             <tr><td>Telefono</td><td> <input type="text" name="telefono"></td></tr>
-            <tr><td colspan="2"><input type="submit" name="ingresar" class="btn btn-primary" value="ingresar"></td>
-            <td><input type="submit" name="Query" class="btn btn-primary" value="inicio" onClick="window.open('index.jsp')"></td>
-             <td><input type="submit" name="Query" class="btn btn-primary" value="Buscar" onClick="window.open('FormConsulta_1.jsp')"></td>
-              <td><input type="submit" name="Query" class="btn btn-primary" value="Eliminar" onClick="window.open('FormEliminar.jsp')"></td>
-        </table>    
-       
+         
+                </form> <tr><td colspan="2"><input type="submit" name="ingresar" class="btn btn-primary" value="ingresar"></td>
+        </table> 
+           <form action="pagaAdmin.jsp">
+                    <button name="Select" class="btn btn-outline-secondary" type="submit" >Atras</button>
+        
         <%if (request.getParameter("ingresar")!=null)
         {
             String id = "";
@@ -45,7 +46,7 @@
             else
             {%>
                  <div class="marginTable"  data-count="5">
-            coño
+            error
         </div>
             <%}
         }

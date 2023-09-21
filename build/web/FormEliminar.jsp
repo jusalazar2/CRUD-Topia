@@ -11,17 +11,22 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <link rel="stylesheet" href="color.css">
 
         <title>JSP Page</title>
     </head>
     <form>
     <body>
-   <table border="1" class="table table-dark table-striped">
-            <tr><td> Nombre</td><td><input type="text" class="btn btn-primary" name="nombre"></td></tr>
-            <tr><td colspan="2"><input type="submit" name="delete" value="Eliminar"></td>
-                <td><input type="submit" class="btn btn-primary" name="Query" value="inicio" onClick="window.open('index.jsp')"></td>
-             <td><input type="submit" class="btn btn-primary" name="Query" value="Buscar" onClick="window.open('FormConsulta_1.jsp')"></td>
-              <td><input type="submit" class="btn btn-primary" name="Query" value="Eliminar" onClick="window.open('FormEliminar.jsp')"></td>
+   <table>
+            <tr><td> Nombre</td><td><input type="text" class="" name="nombre"></td></tr>
+            <tr><td colspan="2"><input type="submit" class="btn btn-outline-danger" name="delete" value="Eliminar"></td>
+                  
+                </form>
+      <td>     
+        <form action="pagaAdmin.jsp">
+            <button name="Select" class="btn btn-outline-secondary" type="submit" >ATRAS</button>
+        </form>
+    </td>
    </table>    
    <%
    if(request.getParameter("delete")!=null)
@@ -33,7 +38,7 @@
             if( pr=true)
             {%>
                 <div class="marginTable"  data-count="5">
-            bien
+           Datos eliminados correctamente
         </div>
             <%}
             else

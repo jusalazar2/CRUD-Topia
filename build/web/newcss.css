@@ -1,9 +1,6 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
-*/
-/* 
-    Created on : 12/09/2023, 8:19:20 p. m.
-    Author     : juan-
-*/
+.center-and-margin-table {
+    margin: 20px auto 0; /* Margen superior de 20px y margen automático en los lados izquierdo y derecho */
 
+    .letras-rojas {
+    color: red;
+}
