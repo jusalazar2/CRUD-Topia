@@ -9,7 +9,7 @@
     <div class="row align-items-center h-100">
         <div class="col-3 mx-auto">
             <div class="text-center">
-                <img id="profile-img" class="rounded-circle profile-img-card" src="https://i.imgur.com/6b6psnA.png" />
+                <img id="profile-img" class="rounded-circle profile-img-card" src="https://static.vecteezy.com/system/resources/previews/014/002/257/non_2x/stationery-store-logo-design-template-free-vector.jpg" />
                 <p id="profile-name" class="profile-name-card"></p>
                 <form  class="form-signin">
 

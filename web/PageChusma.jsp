@@ -25,9 +25,8 @@
                 <div id="content" align="center">
                     <table border="1" class="table table-striped">
                         <td><center>
-                             <form action="FormConsulta_2.jsp">
-                            
-                            <button name="Select" class="btn btn-outline-info" type="submit" >BUSCAR</button>
+                             <form action="FormIngresar_1.jsp">
+                            <button name="Select" class="btn btn-outline-info" type="submit" >INGRESAR</button>
          </form>
                                              <form action="login.jsp">
                     <button name="Select" class="btn btn-outline-danger" type="submit" >Cerrar sesion</button>

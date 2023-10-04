@@ -43,6 +43,7 @@ public class Prueba extends Conexion.Conx
     
     public Boolean Eliminar(String nombre)
     {
+ 
         String Consulta = "delete from personas where nombre='"+nombre+"'";
         SetSentencia(Consulta);
         return  EjecutarSQL();

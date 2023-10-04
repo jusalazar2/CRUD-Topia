@@ -25,20 +25,12 @@
             <div ><div>
                     <div class="container" >
                         <table border=""  class="">
-                            <td>     <form action="FormConsulta.jsp">
-                                    <button name="Select" class="btn btn-outline-success" type="submit" >CONSULTAR</button>
-                                </form>
-                            </td>
+                            
                                 <td>  <form action="FormIngresar.jsp">
                                         <button name="Select" class="btn btn-outline-danger" type="submit" >INGRESAR</button>
                                     </form>
                                 </td>
-                                      <td>
-                                   <form action="FormConsulta_1.jsp">
-                                <button name="Select" class="btn btn-outline-warning" type="submit" >BUSCAR</button>
-                                    </form>       
-                                </td>
-                                
+                         
                                          <td>  
                                             <form action="FormActualizar.jsp">
                                         <button name="Select" class="btn btn-outline-primary" type="submit" >ACTUALIZAR</button>
@@ -56,6 +48,7 @@
             </div>
  </table >
             <%
+               
              
                  Logica.Prueba obj= new Logica.Prueba();
                  ResultSet ds=obj.ConsultarTodos();
@@ -82,16 +75,34 @@
                     </td>
                     </td>
                     <td style="width: 10px; height: 10px;">
-                        <form action="FormEliminar.jsp">
-                            <button name="Delete" class="btn btn-outline-danger" type="submit" >Eliminar</button>
-                        </form>
+                        <form action="">
+                            
+                           
+<button onclick="mostrarConfirmacion('<%out.write(" "+ds.getString("nombre"));%>')" class="btn btn-outline-dark" type="submit">ELIMINAR</button>
+
+             </form>
                     </td>
                
                     <%
-                }
-                    
-                    %>
+                }   
+                     %>
             </table>
+            
+            <script>
+function mostrarConfirmacion(mensaje) {
+    var resultado = confirm("¿Estás seguro de que deseas " + mensaje + "?");
+
+    if (resultado === true) {
+        alert("Has seleccionado Aceptar.");
+    } else {
+        alert("Has seleccionado Cancelar.");
+    };
+    
+      
+}
+</script>
+
+           
 
                                <form action="login.jsp">
                     <button name="Select" class="btn btn-outline-danger" type="submit" >Cerrar sesion</button>
@@ -100,6 +111,7 @@
                 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
                 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
                 </body>
                 </html>
