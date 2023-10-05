@@ -9,18 +9,16 @@
 <!DOCTYPE html>
 <html
     <head>
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"></link>
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css"></link>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="color.css">
 
         <title>CRUD</title>
     </head>
-    <body style="background-color:#E5E8E8">
 
-    <div id="container">
-
-        <div id="header"><h1 align="center"  style="color:e"> CRUD </h1></div>
-        <center>
+ 
      <div id="wrapper">
             <div ><div>
                     <div class="container" >
@@ -40,6 +38,11 @@
                                                   <td> 
                                               <form action="FormEliminar.jsp">
                                         <button name="Select" class="btn btn-outline-dark" type="submit" >ELIMINAR</button>
+                                    </form>
+                                </td>
+                                  <td>  
+                                            <form action="Excel.jsp">
+                                        <button name="Select" class="btn btn-outline-primary" type="submit" >EXCEL</button>
                                     </form>
                                 </td>
                    </table>
@@ -75,11 +78,13 @@
                     </td>
                     </td>
                     <td style="width: 10px; height: 10px;">
-                        <form action="">
+                        <form action="FormEliminar.jsp" method="GET">
                             
-                           
-<button onclick="mostrarConfirmacion('<%out.write(" "+ds.getString("nombre"));%>')" class="btn btn-outline-dark" type="submit">ELIMINAR</button>
-
+                           <input type="text" class="" name="nombre" value="<%  out.write(" "+ds.getString("nombre"));%>" style="display: none;">
+                            <button onclick="mostrarConfirmacion('<%out.write(" "+ds.getString("nombre"));%>')" class="btn btn-outline-dark" type="submit"  <div class="marginTable"  data-count="5">
+           
+                             </div>ELIMINAR</button>
+  
              </form>
                     </td>
                
@@ -94,11 +99,6 @@ function mostrarConfirmacion(mensaje) {
 
     if (resultado === true) {
         alert("Has seleccionado Aceptar.");
-    } else {
-        alert("Has seleccionado Cancelar.");
-    };
-    
-      
 }
 </script>
 
@@ -112,6 +112,9 @@ function mostrarConfirmacion(mensaje) {
                 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+ 
+
 
                 </body>
                 </html>

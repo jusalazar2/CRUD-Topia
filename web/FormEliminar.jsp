@@ -29,6 +29,37 @@
     </td>
    </table>    
    <%
+   if (request.getParameter("nombre") != null && !request.getParameter("nombre").trim().isEmpty()) 
+
+     {
+      String nombre =request.getParameter("nombre").trim();
+            Logica.Prueba obj = new Logica.Prueba();
+            boolean pr = false;
+            pr = obj.Eliminar(nombre);
+            if( pr=true)
+            {%>
+                <div class="marginTable"  data-count="5">
+           Datos eliminados correctamente
+        </div>
+            <%}
+            else
+            {%>
+                 <div class="marginTable"  data-count="5">
+            coño
+        </div>
+            <%}
+}
+
+else {%>
+                 <div class="marginTable"  data-count="5">
+            vacio
+        </div>
+            <%}
+
+          
+        
+   
+   
    if(request.getParameter("delete")!=null)
              {
             String nombre =request.getParameter("nombre");

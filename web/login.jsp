@@ -20,7 +20,10 @@
                 </form>
                 <form action="registrar.jsp">
                             <button name="Select" class="btn btn-outline-success" type="submit" >Registrarme</button>
-                        </form><!-- /form -->
+                        </form>
+                 <form action="registrar.jsp">
+                            <button name="Select" class="btn btn-outline-success" type="submit" >olvidate tu contraseña</button>
+                    <!-- /form -->
                 <%
        
                    if (request.getParameter("login")!=null)
@@ -49,7 +52,7 @@
                     despachador.forward(request, response);
                     }
                else{
-                    RequestDispatcher despachador= request.getRequestDispatcher("/PageChusma.jsp");
+                    RequestDispatcher despachador= request.getRequestDispatcher("/catalogo.jsp");
                     despachador.forward(request, response);
                   } 
 }

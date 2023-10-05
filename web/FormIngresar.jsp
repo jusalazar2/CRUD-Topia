@@ -40,7 +40,7 @@
             if( pr=true)
             {%>
                 <div class="marginTable"  data-count="5">
-            bien
+            Datos actualizados correctamente
         </div>
             <%}
             else
